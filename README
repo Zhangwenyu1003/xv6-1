@@ -1,9 +1,0 @@
-## 第一层：机制观察
-
-### 任务1：系统调用路径跟踪
-修改 test_write.c 及内核 syscall.c、sysfile.c，成功追踪 write 调用路径。
-![trace](photo/task1.png)
-
-### 任务2：调度过程观察
-...
-![sched](photo/task2.png)

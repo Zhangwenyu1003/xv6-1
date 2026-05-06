@@ -343,6 +343,7 @@ scheduler(void)
       switchuvm(p);
       p->state = RUNNING;
 
+      cprintf("[SCHED] switch to pid=%d\n", p->pid);  // ← 添加这一行
       swtch(&(c->scheduler), p->context);
       switchkvm();
 
@@ -354,7 +355,6 @@ scheduler(void)
 
   }
 }
-
 // Enter scheduler.  Must hold only ptable.lock
 // and have changed proc->state. Saves and restores
 // intena because intena is a property of this
