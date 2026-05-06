@@ -2,10 +2,17 @@
 
 ### 任务1：系统调用路径跟踪
 修改 test_write.c 及内核 syscall.c、sysfile.c，成功追踪 write 调用路径。
-![trace](photo/task1.png)
+![trace](task1.png)
 
 ### 任务2：调度过程观察
 在 scheduler() 中添加 cprintf，观察到：
 - 同一进程（如 pid=1）连续运行多次，因系统中只有少数进程。
 - 不同进程（pid=1 与 pid=2）交替切换，验证调度器工作正常。
-![调度日志](photo/task2.png)
+![调度日志](task2.png)
+
+
+
+### 任务3：内存分配观察
+
+
+![内存分配观察](task3.png)
