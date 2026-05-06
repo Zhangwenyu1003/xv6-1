@@ -4,7 +4,9 @@
 int
 main(void)
 {
-  printf(1, "[USER] calling write directly\n"); // 这一行是用户态追踪
-  write(1, "hello\n", 6);                       // 直接系统调用
+  write(1, "\n===== START TRACE =====\n", 25);
+  write(1, "[USER] calling write\n", 22);
+  write(1, "hello\n", 6);
+  write(1, "===== END TRACE =====\n", 23);
   exit();
 }
