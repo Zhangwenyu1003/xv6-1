@@ -81,6 +81,7 @@ sys_read(void)
 int
 sys_write(void)
 {
+  cprintf("[KERNEL] sys_write invoked\n"); 
   struct file *f;
   int n;
   char *p;

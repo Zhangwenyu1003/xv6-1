@@ -134,6 +134,8 @@ syscall(void)
   int num;
   struct proc *curproc = myproc();
 
+  cprintf("[KERNEL] enter syscall\n");   // ← 加在这里
+
   num = curproc->tf->eax;
   if(num > 0 && num < NELEM(syscalls) && syscalls[num]) {
     curproc->tf->eax = syscalls[num]();
